@@ -1,17 +1,12 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+// import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  // <CHANGE> Updated title and description for PT Pinuy Kitchen
-  title: "PT Pinuy Kitchen - Premium Food Solutions",
+  title: "Chat Biz - Business Chat Automation",
   description:
-    "Experience authentic and innovative culinary excellence with PT Pinuy Kitchen",
+    "Automate your customer conversations across WhatsApp, Telegram, and more. Streamline communication with AI-powered automation.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -39,10 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
-        {children}
-        <Analytics />
-      </body>
+      <body className={`font-sans antialiased`}>{children}</body>
     </html>
   );
 }
